@@ -64,12 +64,16 @@ public class BookingUpdateTest {
        booking.put("totalprice", 1800);
        booking.put("additionalneeds", "Lunch");
        
-       Response putResponse = RestAssured.given().contentType(ContentType.JSON).cookie("token",token).body(booking.toString()).put("/booking/"+bookingId);
-	
-       System.out.println("Status code is: "+putResponse.getStatusCode());
-       System.out.println("Body is: "+putResponse.getBody().asString());
+//       Response putResponse = RestAssured.given().contentType(ContentType.JSON).cookie("token",token).body(booking.toString()).put("/booking/"+bookingId);
+       Response patchResponse = RestAssured.given().contentType(ContentType.JSON).cookie("token",token).body(booking.toString()).patch("/booking/"+bookingId);
    	
-	
+//       System.out.println("Status code is: "+putResponse.getStatusCode());
+//       System.out.println("Body is: "+putResponse.getBody().asString());
+   	
+       System.out.println("Status code is: "+patchResponse.getStatusCode());
+     System.out.println("Body is: "+patchResponse.getBody().asString());
+ 	
+
 	
 	
 	}
