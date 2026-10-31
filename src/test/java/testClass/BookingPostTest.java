@@ -7,36 +7,53 @@ import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-
+import testClass.pojo.Booking;
+import testClass.pojo.BookingDates;
 import io.restassured.http.ContentType;
 
-public class BookingPostTest {
+public class BookingPostTest extends BaseTest {
 	
 	@Test
 	 public void BookingGetTest() {
 
 	//Created data using post
-	RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+//	RestAssured.baseURI = "https://restful-booker.herokuapp.com";
 	
 	RequestSpecification httpRequest = RestAssured.given();
 	httpRequest.contentType(ContentType.JSON);
 	
-	JSONObject jsonobject = new JSONObject();
-	jsonobject.put("firstname", "Kamesh");
-	jsonobject.put("lastname", "Vaidya");
-	jsonobject.put("totalprice",1500);
-	jsonobject.put("depositpaid", true);
-	jsonobject.put("additionalneeds", "Breakfast");
+	//2. Create booking using jsonobject
+//	JSONObject jsonobject = new JSONObject();
+//	jsonobject.put("firstname", "Kamesh");
+//	jsonobject.put("lastname", "Vaidya");
+//	jsonobject.put("totalprice",1500);
+//	jsonobject.put("depositpaid", true);
+//	jsonobject.put("additionalneeds", "Breakfast");
 	
-	JSONObject bookingdate = new JSONObject();
-	bookingdate.put("checkin", "2027-01-10");
-	bookingdate.put("checkout", "2027-01-15");
+	// 2. Create booking using POJO
+	Booking booking = new Booking();
+    booking.setFirstname("Kamesh");
+    booking.setLastname("Vaidya");
+    booking.setTotalprice(1500);
+    booking.setDepositpaid(true);
+    booking.setAdditionalneeds("Breakfast");
+    
 	
-	jsonobject.put("bookingdates", bookingdate);
-
+//	JSONObject bookingdate = new JSONObject();
+//	bookingdate.put("checkin", "2027-01-10");
+//	bookingdate.put("checkout", "2027-01-15");
 	
-	httpRequest.body(jsonobject.toString());
-	
+	 BookingDates dates = new BookingDates();
+     dates.setCheckin("2027-01-10");
+     dates.setCheckout("2027-01-15");
+     booking.setBookingdates(dates);
+     
+     
+//	jsonobject.put("bookingdates", dates);
+//	httpRequest.body(jsonobject.toString());
+     httpRequest.body(booking);
+     
+     
 	Response response = httpRequest.request(Method.POST, "/booking");
 	
 	int statusCode = response.getStatusCode();

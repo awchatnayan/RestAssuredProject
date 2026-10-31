@@ -6,6 +6,7 @@
       <class name="testClass.BookingPostTest">
         <methods>
           <include name="BookingGetTest"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- testClass.BookingPostTest -->
     </classes>

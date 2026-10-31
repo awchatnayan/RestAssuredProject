@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-25T23:04:09 IST" name="Default suite" finished-at="2026-10-25T23:04:17 IST" duration-ms="7805">
+  <suite started-at="2026-10-26T14:29:33 IST" name="Booking API Automation Suite" finished-at="2026-10-26T14:29:56 IST" duration-ms="22776">
     <groups>
     </groups>
-    <test started-at="2026-10-25T23:04:09 IST" name="Default test" finished-at="2026-10-25T23:04:17 IST" duration-ms="7805">
+    <test started-at="2026-10-26T14:29:33 IST" name="Booking API Tests" finished-at="2026-10-26T14:29:56 IST" duration-ms="22776">
+      <class name="testClass.BookingGetTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testClass.BookingGetTest@742ff096]" started-at="2026-10-26T14:29:33 IST" name="setup" finished-at="2026-10-26T14:29:34 IST" duration-ms="841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="BookingGetTest()[pri:0, instance:testClass.BookingGetTest@742ff096]" started-at="2026-10-26T14:29:34 IST" name="BookingGetTest" finished-at="2026-10-26T14:29:39 IST" duration-ms="5462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookingGetTest -->
+      </class> <!-- testClass.BookingGetTest -->
+      <class name="testClass.BookingPostTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testClass.BookingPostTest@196a42c3]" started-at="2026-10-26T14:29:39 IST" name="setup" finished-at="2026-10-26T14:29:39 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="BookingGetTest()[pri:0, instance:testClass.BookingPostTest@196a42c3]" started-at="2026-10-26T14:29:39 IST" name="BookingGetTest" finished-at="2026-10-26T14:29:45 IST" duration-ms="5230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookingGetTest -->
+      </class> <!-- testClass.BookingPostTest -->
+      <class name="testClass.BookingDeleteTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testClass.BookingDeleteTest@15043a2f]" started-at="2026-10-26T14:29:49 IST" name="setup" finished-at="2026-10-26T14:29:49 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="deleteBookingTest()[pri:0, instance:testClass.BookingDeleteTest@15043a2f]" started-at="2026-10-26T14:29:49 IST" name="deleteBookingTest" finished-at="2026-10-26T14:29:54 IST" duration-ms="4155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBookingTest -->
+      </class> <!-- testClass.BookingDeleteTest -->
       <class name="testClass.BookingUpdateTest">
-        <test-method signature="BookingUpdateTest()[pri:0, instance:testClass.BookingUpdateTest@2794eab6]" started-at="2026-10-25T23:04:09 IST" name="BookingUpdateTest" finished-at="2026-10-25T23:04:17 IST" duration-ms="7710" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testClass.BookingUpdateTest@4c60d6e9]" started-at="2026-10-26T14:29:45 IST" name="setup" finished-at="2026-10-26T14:29:45 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="BookingUpdateTest()[pri:0, instance:testClass.BookingUpdateTest@4c60d6e9]" started-at="2026-10-26T14:29:45 IST" name="BookingUpdateTest" finished-at="2026-10-26T14:29:49 IST" duration-ms="4770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookingUpdateTest -->
       </class> <!-- testClass.BookingUpdateTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testClass.BookingNegativeTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testClass.BookingNegativeTest@4a83a74a]" started-at="2026-10-26T14:29:54 IST" name="setup" finished-at="2026-10-26T14:29:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="createBookingWithMissingFieldsTest()[pri:0, instance:testClass.BookingNegativeTest@4a83a74a]" started-at="2026-10-26T14:29:54 IST" name="createBookingWithMissingFieldsTest" finished-at="2026-10-26T14:29:54 IST" duration-ms="723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBookingWithMissingFieldsTest -->
+        <test-method signature="getBookingWithInvalidIdTest()[pri:0, instance:testClass.BookingNegativeTest@4a83a74a]" started-at="2026-10-26T14:29:54 IST" name="getBookingWithInvalidIdTest" finished-at="2026-10-26T14:29:55 IST" duration-ms="754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookingWithInvalidIdTest -->
+        <test-method signature="updateBookingWithoutTokenTest()[pri:0, instance:testClass.BookingNegativeTest@4a83a74a]" started-at="2026-10-26T14:29:55 IST" name="updateBookingWithoutTokenTest" finished-at="2026-10-26T14:29:56 IST" duration-ms="690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookingWithoutTokenTest -->
+      </class> <!-- testClass.BookingNegativeTest -->
+    </test> <!-- Booking API Tests -->
+  </suite> <!-- Booking API Automation Suite -->
 </testng-results>
