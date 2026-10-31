@@ -3,7 +3,7 @@
 
 <suite name="Booking API Automation Suite">
 	<listeners>
-		<listener class-name="utils.ExtentListener" />
+		<listener class-name="utilsClass.ExtentListener" />
 	</listeners>
 	<test name="Booking API Tests">
 		<classes>
