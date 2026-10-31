@@ -10,12 +10,12 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class BookingGetTest {
+public class BookingGetTest extends BaseTest {
 
 	 @Test
-	 public void BookingGetTest() {
+	 public void BookingGetTest()  {
 		 
-			RestAssured.baseURI  = "https://restful-booker.herokuapp.com";
+//			RestAssured.baseURI  = "https://restful-booker.herokuapp.com";
 			
 			RequestSpecification httpRequest = RestAssured.given();
 			

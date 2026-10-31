@@ -9,12 +9,12 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class BookingUpdateTest {
+public class BookingUpdateTest extends BaseTest {
 	
 	@Test
 	 public void BookingUpdateTest() {
 		
-		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+//		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
 		
 		RequestSpecification httpRequest = RestAssured.given();
 		
@@ -46,18 +46,19 @@ public class BookingUpdateTest {
 	    Response response1 = httpRequest.request(Method.GET,"/booking/"+bookingId);   
 	    System.out.println(response1.getBody().asString());
 	   
-	    //Put Request
+	    //Put Request and Patch Request 
 	 // Get authentication token from /auth
-	    JSONObject authobj = new JSONObject();
-	    authobj.put("username", "admin");
-	    authobj.put("password", "password123");
-	   
-	    Response authResponse = RestAssured.given()
-	            .contentType(ContentType.JSON).body(authobj.toString()).post("/auth");
-	    Assert.assertEquals(authResponse.getStatusCode(), 200, "Token API not created");
+//	    JSONObject authobj = new JSONObject();
+//	    authobj.put("username", "admin");
+//	    authobj.put("password", "password123");
+//	   
+//	    Response authResponse = RestAssured.given()
+//	            .contentType(ContentType.JSON).body(authobj.toString()).post("/auth");
+//	    Assert.assertEquals(authResponse.getStatusCode(), 200, "Token API not created");
+//	    
+//	   String token = authResponse.jsonPath().getString("token");
+	    String token = AuthHelper.getToken();
 	    
-	   String token = authResponse.jsonPath().getString("token");
-	   
 	   //Update the details using put
 	   booking.put("firstname", "KameshNayan");
        booking.put("lastname", "Vaidyaa");

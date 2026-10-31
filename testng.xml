@@ -1,0 +1,15 @@
+
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Booking API Automation Suite">
+    <test name="Booking API Tests">
+        <classes>
+            <class name="testClass.BookingGetTest"/>
+            <class name="testClass.BookingPostTest"/>
+            <class name="testClass.BookingUpdateTest"/>
+            <class name="testClass.BookingDeleteTest"/>
+            <class name="testClass.BookingNegativeTest"/>
+        </classes>
+    </test>
+</suite>
